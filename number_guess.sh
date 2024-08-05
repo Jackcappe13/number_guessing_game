@@ -65,7 +65,7 @@ else
       INSERT_BEST_GAME_RESULT=$($PSQL "UPDATE leaderboards SET best_game = $BEST_GAME WHERE username = '$USERNAME'")
     fi
     echo -e "\nYou guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!\n"
-    break
+    exit
   fi
 fi
 }
